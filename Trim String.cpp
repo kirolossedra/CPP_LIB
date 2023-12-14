@@ -4,6 +4,22 @@
 using namespace std;
 
 
+string clean(string sample){
+    string newStr="";
+    newStr+=sample[0]
+;
+       for(size_t i=1; i<sample.size(); i++){
+        if((isspace(sample[i]))&& isspace(sample[i-1])){
+            continue;
+        } else{
+             
+             newStr+= sample[i];
+        }
+    }
+    return newStr;
+}
+
+
 void percentageDeclare(string message, string percentageOrRatio){
     if(percentageOrRatio[percentageOrRatio.size()-1]=='%'){
         cout<<"The percentage of "<<message<<" is "<< percentageOrRatio;
